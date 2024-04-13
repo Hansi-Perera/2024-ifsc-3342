@@ -1,10 +1,19 @@
-* {
+/*
+Resets margin padding on all elements to zero. 
+*/
+
+*
+
+
+{
 	margin: 0px;
 	padding: 0px;
 }
 body {
 	text-align: center;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-image: url(../img/bro.jpg);
+	background-repeat: repeat-x;
 	background-color: #171717;
 	font-size: 16px;
 	line-height: 1.5em;
@@ -21,8 +30,27 @@ body {
 #header {
 }
 #header h1 a {
+	background-image: url(../img/Hansi\ Perera.png);
+	display: block;
+	height:140px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow:hidden;
 }
+
+.alert{
+	background:red;
+}
+.img-rightalt{
+	float:right;
+	border: 2px solid #c0c0c0;
+	padding: 5px;
+	margin: 20px 0 20px 20px;
+}
+
+
 #nav {
+
 	background-color: #000;
 }
 #nav ul {
