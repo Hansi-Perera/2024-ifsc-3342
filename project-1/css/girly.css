@@ -1,0 +1,45 @@
+/* style.css */
+
+/* Set body background color to light pink */
+body {
+    background-color: #FFB6C1; /* Light pink */
+    font-family: Arial, sans-serif; /* Optional: Setting font-family for better readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Style the header */
+header {
+    background-color: #FF69B4; /* Hot pink */
+    text-align: center; /* Center align the text */
+    padding: 20px 0; /* Add padding top and bottom */
+    margin-bottom: 20px; /* Add space below the header */
+}
+
+header h1 {
+    color: white; /* White text color */
+}
+
+/* Style the navigation menu */
+nav {
+    text-align: center; /* Center align the list */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets from the list */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #FF69B4; /* Hot pink */
+    font-weight: bold; /* Make the text bold */
+}
+
+nav ul li a:hover {
+    color: #C71585; /* Change color on hover to a darker pink */
+}
