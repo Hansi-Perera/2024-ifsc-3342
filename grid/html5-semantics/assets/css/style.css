@@ -1,0 +1,43 @@
+
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+main{
+
+    margin: 20px auto;
+    border: 1px solid #0000;
+    background-
+}
+
+header.primary{
+    width: 920px;
+    background: rgba(0, 0, 0, 0.4);
+    margin-left: 20px;
+    padding:20px; 
+    float:left;
+
+}
+
+#blog{
+    background: rgba(0, 0, 0, 0.6);
+    width: 638px;
+    margin-left: 20px;
+    padding:20px;
+    float:left;
+
+}
+
+aside{
+    background: rgba(0, 0, 0, 0.3);
+    width: 262px;
+    margin-left: 20px;
+    padding:20px;
+    float:left;
+}
