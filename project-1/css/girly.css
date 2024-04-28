@@ -1,45 +1,68 @@
 /* style.css */
 
-/* Set body background color to light pink */
+
 body {
-    background-color: #FFB6C1; /* Light pink */
-    font-family: Arial, sans-serif; /* Optional: Setting font-family for better readability */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    background-color: #FFB6C1; 
+    font-family: Arial, sans-serif; 
+    padding: 0; 
 }
 
 /* Style the header */
 header {
-    background-color: #FF69B4; /* Hot pink */
-    text-align: center; /* Center align the text */
-    padding: 20px 0; /* Add padding top and bottom */
-    margin-bottom: 20px; /* Add space below the header */
+    background-color: #FF69B4; 
+    text-align: center; 
+    padding: 20px 0; 
+    margin-bottom: 20px; 
 }
 
 header h1 {
-    color: white; /* White text color */
+    color: white; 
 }
 
-/* Style the navigation menu */
+
 nav {
-    text-align: center; /* Center align the list */
+    text-align: center; 
 }
 
 nav ul {
-    list-style-type: none; /* Remove bullets from the list */
-    padding: 0; /* Remove default padding */
+    list-style-type: none; 
+    padding: 0; 
 }
 
 nav ul li {
-    margin-bottom: 10px; /* Add space between list items */
+    margin-bottom: 10px; 
 }
 
 nav ul li a {
-    text-decoration: none; /* Remove underline from links */
-    color: #FF69B4; /* Hot pink */
-    font-weight: bold; /* Make the text bold */
+    text-decoration: none; 
+    color: #FF69B4; 
+    font-weight: bold; 
 }
 
 nav ul li a:hover {
-    color: #C71585; /* Change color on hover to a darker pink */
+    color: #C71585; /* hover to a darker pink */
+}
+/*attempt to add queries to homepage*/
+/*by the way these do work, which is interesting.. when the page is open fully it aligns in columns*/
+/*when the homepage is minimized, the content gets stacked to fit the screen*/
+
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    nav ul li {
+        margin-bottom: 20px; /* same margin for tablet view */
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+    nav ul li {
+        margin-bottom: 30px; /* increases space between list items for desktop view */
+    }
+
+    /* adjusts the grid layout for different desktop views (smaller OR minimuized tabs) */
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Show 3 columns in desktop view */
+    }
 }
