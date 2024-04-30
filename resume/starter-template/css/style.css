@@ -1,9 +1,10 @@
 /* Variables */
 :root {
-  --main-bg-color: #f7e9e9; /* Pastel pink */
-  --primary-type-color: #3a2a2a; /* Dark pink */
-  --accent-color-1: #ff69b4; /* Hot pink */
-  --font-family-heading: 'Playfair Display', serif; /* more elegant font */
+  --main-bg-color: #f5edfd; /* Light lavender */
+  --primary-type-color: #392956; /* Dark purple */
+  --accent-color-1: #6b4d90; /* Moderate purple */
+  --accent-color-2: #9a72ac; /* Pale purple */
+  --font-family-heading: 'Playfair Display', serif; /* Elegant font */
 }
 
 /* Reset */
@@ -11,15 +12,15 @@ html {
   box-sizing: border-box;
 }
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 /* Typography */
 body {
   font-family: "Open Sans", sans-serif;
-  font-weight: bold; /* Bolder font */
+  font-weight: normal; /* Normal font weight */
 }
 
 /* Fluid Images */
@@ -29,9 +30,9 @@ img {
 
 /* Utility Classes */
 .container {
-  max-width: 420px; /* Design Time */
+  max-width: 800px; /* Adjusted container width */
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(57, 41, 86, 0.15); /* Dark purple with transparency */
 }
 
 /* Helper Classes */
@@ -63,35 +64,30 @@ nav {
 }
 
 nav ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 20px 20px 0px 20px;
+  display: flex;
+  justify-content: center; /* Center alignment */
+  padding: 20px 0;
 }
 
 nav li {
   list-style-type: none;
+  margin: 0 10px;
 }
-/*hovering navigation changees colors tabs*/
-nav a:link, nav a:visited {
-  display: block;
-  padding: 8px 16px;
-  border: 1px solid #000000e9;
-  text-align: center;
+
+nav a {
   text-decoration: none;
-  color: #f4ade2; 
-  text-transform: uppercase;
-  font-size: 0.75em;
-  background: rgba(165, 3, 57, 0.65);
-  transition: background-color 1s ease;
-  font-weight: bold; /* Bolder font */
+  color: var(--primary-type-color);
+  font-size: 0.9em; /* Adjusted font size */
+  transition: color 0.3s ease;
+  font-weight: bold;
 }
 
 nav a:hover {
-  background: rgba(143, 49, 98, 0.95);
+  color: #7b599e; /* Lighter purple on hover */
 }
 
 main {
-  padding: 1px 20px;
+  padding: 20px; /* Adjusted padding */
 }
 
 main h1 {
@@ -101,75 +97,72 @@ main h1 {
   text-align: center;
   font-weight: 400;
   font-variant: small-caps;
-  font-family: var(--font-family-heading); /* Slightly elegant font */
+  font-family: var(--font-family-heading); /* Elegant font */
 }
-main h1:before,
-main h1:after {
-  background-color: var(--accent-color-1);
+main h1::before,
+main h1::after {
+  background-color: #9a72ac; /* Pale purple */
   content: "\a0";
   flex-grow: 1;
-  height: 1px;
+  height: 1.5px;
   position: relative;
-  top: 1.6rem;
+  top: 0.8em;
 }
-main h1:before {
-  margin-right: 5px;
+main h1::before {
+  margin-right: 15px; /* Adjusted margin */
 }
-main h1:after {
-  margin-left: 5px;
+main h1::after {
+  margin-left: 15px; /* Adjusted margin */
 }
-/*page title section over begins details section  */
+
 dl {
-  display: grid;
-  /*shorthand*/
-  grid-template: repeat(8, auto) / 8em 1fr;
-  font-size: .9rem;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 dt {
-  font-weight: 800;
-  grid-column: 1;
+  flex: 1 30%; /* Adjusted flex parameters */
+  font-weight: 700;
   padding: 10px 0;
-  border-bottom: 1px solid var(--accent-color-1);
+  border-bottom: 1px solid #d87add; /* Lighter purple */
 }
 dd {
+  flex: 1 70%; /* Adjusted flex parameters */
   margin: 0;
-  grid-column: 2;
   padding: 10px 0;
-  border-bottom: 1px solid var(--accent-color-1);
+  border-bottom: 1px solid #f5edfd; /* Light lavender */
 }
-
 .related-links {
   display: flex;
   justify-content: center;
   list-style: none;
   padding: 0;
-  gap: 20px;
 }
-
-.related-links a {
-  border: 1px solid var(--accent-color-1);
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff; /* White text */
-  text-transform: uppercase;
-  font-size: 0.75em;
-  background: rgba(0, 0, 0, 0.65);
-  transition: background-color 0.5s ease;
-  font-weight: bold; /* Bolder font */
-}
-
 .related-links .svg-inline--fa {
   font-size: 1.8em;
   padding-top: 7px;
 }
-/*this makeas the link sections change color by hovering*/
-.related-links a:hover {
-  background: rgba(255, 188, 208, 0.95);
+
+.related-links a {
+  border: 1px solid #6b4d90; /* Moderate purple */
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  background: rgba(105, 77, 138, 0.65); /* Darker purple with transparency */
+  transition: background-color 0.5s ease;
+  font-weight: bold;
 }
 
-.related-links li {}
+.related-links a:hover {
+  background: rgba(123, 89, 158, 0.95); /* Lighter purple on hover */
+}
+
+.related-links li {
+  margin-right: 20px;
+}
 
 #skills {}
 
@@ -179,7 +172,7 @@ dd {
 
 .job,
 .certificate {
-  border-bottom: 1px solid var(--accent-color-1);
+  border-bottom: 1px solid #6b4d90; /* Moderate purple */
   padding-bottom: 20px;
 }
 
@@ -200,91 +193,95 @@ footer {
   padding: 20px 0;
 }
 
-.page-title {
-  grid-area: title;
-}
-
-#about {
-  grid-area: about;
-}
-
-#skills {
-  grid-area: skills;
-}
-
-#experience {
-  grid-area: experience;
-}
-
-#education {
-  grid-area: education;
-}
-
+/* Reorder Source Using Flexbox */
 main.container {
-  display: grid;
-  grid-template-areas:
-    "title"
-    "about"
-    "education"
-    "experience"
-    "skills";
+  display: flex;
+  flex-flow: row wrap;
 }
 
-/* Media Queries */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 680px;
-  }
-  
+main.container > * {
+  flex: 1 100%;
+}
+
+.page-title {
+  order: 0;
+}
+#about {
+  order: 1;
+}
+#skills {
+  order: 3;
+}
+#experience {
+  order: 2;
+}
+#education {
+  order: 4;
+}
+
+
+  /* Media Queries */
+@media only screen and (min-width: 768px) {
   main.container {
-    display: grid;
-    grid-template-columns: 36.5% auto;
-    grid-template-areas:
-      "title  title"
-      "about  about"
-      "skills experience"
-      "...... education";
+    max-width: 900px;
   }
-  
-  /* Nested Grid */
+  header.container {
+    max-width: 900px;
+  }
+  .page-title {
+  }
+  #skills {
+    padding-left: calc(30% + 40px);
+  }
+  #experience {
+    padding-left: calc(30% + 40px);
+  }
+  #education {
+    padding-left: calc(30% + 40px);
+  }
   #about {
-    display: grid;
-    grid-template-columns: 250px 1fr auto;
-    gap: 2em;
-    grid-template-areas:
-      "bio details details"
-      "related related related";
+    display: flex;
+    flex-flow: row wrap;
   }
 
   .bio {
-    grid-area: bio;
+    flex: 1 30%;
   }
-  
   .details {
-    grid-area: details;
+    flex: 1 70%;
+    padding-left: 40px;
   }
-  
   .related-links {
-    grid-area: related;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #9a72ac; /* Pale purple */
     padding-bottom: 50px;
+    flex: 1;
   }
-
-  dl {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 8em 1fr;
-    /*shorthand*/
-    grid-template: repeat(7, 50px) / 7em 1fr;
+  /* Centering image */
+  .image-container {
+    display: flex;
+    justify-content: center;
   }
+  .image-container img {
+    max-width: 100%;
+  }
+}
 
-  dd {
-    padding-bottom: 0;
+/* Media Queries for Tablet and Mobile */
+@media only screen and (max-width: 767px) {
+ 
+  .image-container {
+    display: flex;
+    justify-content: center;
+  }
+  .image-container img {
+    max-width: 100%;
   }
 }
 
 
-@media only screen and (max-width: 767px) {
-  .container {
-    max-width: 100%;
+/* Edge Case Tweaks */
+@media only screen and (max-width: 435px) {
+  .related-links li a svg {
+    display: none;
   }
+}
