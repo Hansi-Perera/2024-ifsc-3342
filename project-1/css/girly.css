@@ -1,5 +1,4 @@
-/* style.css */
-
+/* girly.css */
 
 body {
     background-color: #FFB6C1; 
@@ -7,7 +6,6 @@ body {
     padding: 0; 
 }
 
-/* Style the header */
 header {
     background-color: #FF69B4; 
     text-align: center; 
@@ -17,8 +15,8 @@ header {
 
 header h1 {
     color: white; 
+    margin: 0; 
 }
-
 
 nav {
     text-align: center; 
@@ -37,32 +35,27 @@ nav ul li a {
     text-decoration: none; 
     color: #FF69B4; 
     font-weight: bold; 
+    transition: color 0.3s; 
 }
 
 nav ul li a:hover {
-    color: #C71585; /* hover to a darker pink */
+    color: #C71585; 
 }
-/*attempt to add queries to homepage*/
-/*by the way these do work, which is interesting.. when the page is open fully it aligns in columns*/
-/*when the homepage is minimized, the content gets stacked to fit the screen*/
 
-
-/* Tablet */
 @media screen and (min-width: 768px) {
     nav ul li {
-        margin-bottom: 20px; /* same margin for tablet view */
+        margin-bottom: 20px; 
     }
 }
 
-/* Desktop */
 @media screen and (min-width: 992px) {
     nav ul li {
-        margin-bottom: 30px; /* increases space between list items for desktop view */
+        margin-bottom: 30px; 
     }
 
-    /* adjusts the grid layout for different desktop views (smaller OR minimuized tabs) */
     nav ul {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Show 3 columns in desktop view */
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px; 
     }
 }
